@@ -41,6 +41,23 @@
             cursor: pointer;
             text-decoration: underline;
         }
+
+
+      #advancedModeBtn {
+          background-color: black;
+          color: green;
+          border: 2px solid green;
+          padding: 5px 10px;
+          cursor: pointer;
+          margin-top: 20px;
+      }
+
+      #advancedModeBtn:hover {
+          background-color: green;
+          color: black;
+      }
+
+        
     </style>
 </head>
 <body>
@@ -55,9 +72,17 @@
   <label for="urlInput">Enter URL:</label>
     <input type="text" id="urlInput" oninput="updateOutput()">
 
-  <label for="iconInput">Enter Icon Src:</label>
+<label for="iconInput">Enter Icon Src:</label>
   <input type="text" id="iconInput" oninput="updateOutput()">
 
+  <button id="advancedModeBtn" onclick="openAdvancedMode()">Advanced Mode</button>
+
+  <script>
+      function openAdvancedMode() {
+          const advancedUrl = 'https://icon.samj.app/advanced'; // Replace with your desired placeholder URL
+          window.open(advancedUrl, '_blank');
+      }
+  </script>
     <h2>Install Link:</h2>
  
 </div>
